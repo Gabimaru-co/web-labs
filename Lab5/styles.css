@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+td {
+    width: 150px;
+    height: 120px;
+    border: 2px solid #333;
+}
+
+th {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: 2px solid #333;
+}
+
+.first {
+    background-image: url("images/sun.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.rain {
+    background-image: url("images/rain.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.snow {
+    background-image: url("images/snow.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+td:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}

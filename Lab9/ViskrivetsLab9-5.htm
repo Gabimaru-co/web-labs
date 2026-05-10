@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ViskrivetsLab09-5</title>
+    <link rel="stylesheet" href="./style3.css">
+</head>
+<body>
+<h2>Навігаційна карта фігур</h2>
+<div class="map-container">
+    <img src="./images/Абстрактні_форми.png" usemap="#image-map" alt="Геометричні фігури" width="1000">
+    <map name="image-map">
+        <!-- Прямокутник -->
+        <area shape="rect"
+              coords="300,420,900,650"
+              href="#"
+              alt="Про мене"
+              title="Про мене"
+              style="cursor:pointer;"
+              onmouseover="showText('Ви обрали: Про мене')"
+              onmouseout="clearText()">
+        <!-- Круг -->
+        <area shape="circle"
+              coords="820,230,150"
+              href="#"
+              alt="Посилання"
+              title="Посилання"
+              style="cursor:pointer;"
+              onmouseover="showText('Ви обрали: Посилання')"
+              onmouseout="clearText()">
+        <!-- Трикутник -->
+        <area shape="poly"
+              coords="60,400, 500,200, 600,400"
+              href="#"
+              alt="Моя Батьківщина"
+              title="Моя Батьківщина"
+              style="cursor:pointer;"
+              onmouseover="showText('Ви обрали: Моя Батьківщина')"
+              onmouseout="clearText()">
+    </map>
+</div>
+<br>
+<div id="info-text">Наведіть курсор на фігуру</div>
+<script>
+    const infoDisplay = document.getElementById('info-text');
+    function showText(text) {
+        infoDisplay.innerText = text;
+        infoDisplay.classList.add('text-active');
+    }
+    function clearText() {
+        infoDisplay.innerText = 'Наведіть курсор на фігуру';
+        infoDisplay.classList.remove('text-active');
+    }
+</script>
+</body>
+</html>

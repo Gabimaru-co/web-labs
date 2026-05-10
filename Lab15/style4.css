@@ -1,0 +1,56 @@
+/* фон анім*/
+@keyframes gradientMove {
+    0% { background-position: 0% }
+    100% { background-position: 100% }
+}
+
+/*фон*/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(90deg, #c0b517, #b4421f);
+    background-size: 200%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* заголовок*/
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 28px;
+    color: #d9c3c3;
+}
+
+/* style абзац */
+p {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgb(52, 189, 189);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* 1 */
+.first {
+    color: #e45d0e;              
+    text-align: left;            
+    font-family: Arial, sans-serif;
+    border-left: 5px solid #000000;
+}
+
+/* 2*/
+.second {
+    color: #2e7d32;              
+    text-align: right;         
+    font-family: Georgia, serif;
+    font-size: 18px;
+    border-left: 5px solid #000000;
+}
+
+/* hover */
+p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}

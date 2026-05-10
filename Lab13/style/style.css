@@ -1,0 +1,131 @@
+/* ===== ЗАГАЛЬНІ СТИЛІ ===== */
+body.flowers-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+
+    /* фон з анімацією */
+    background: linear-gradient(270deg, #cc6796, #ce4a55, #b0589b);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.main-title {
+    text-align: center;
+    color: #d21818;
+    margin-bottom: 20px;
+}
+
+/* ===== Слово "Зміст" ===== */
+.content-title {
+    text-align: center;
+    color: #c72727;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* ===== МЕНЮ/ЗМІСТ ===== */
+.menu {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding: 10px 15px;
+
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #9333ea, #ec4899);
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: linear-gradient(45deg, #7e22ce, #db2777);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== КАРТКА ===== */
+.flower-card {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 750px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.flower-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== НАЗВА ===== */
+.flower-card h2 {
+    color: purple;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* ===== КАРТИНКА ===== */
+.flower-card img {
+    width: 300px;
+    border-radius: 15px;
+    margin: 15px auto;
+    display: block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.flower-card img:hover {
+    transform: scale(1.12);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* ===== ТЕКСТ ===== */
+.flower-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: black;
+    max-width: 600px;
+    margin: 15px auto;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* ===== КНОПКА НАВЕРХ ===== */
+.top-link {
+    display: block;
+    width: 220px;
+    margin: 20px auto 0;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #9333ea, #ec4899);
+    transition: 0.3s;
+}
+
+.top-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(236,72,153,0.5);
+}

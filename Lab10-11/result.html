@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div class="box">
+    <h1>Дякуємо!</h1>
+    <p>Ваші дані успішно відправлені ✅</p>
+
+    <p id="timer">Сторінка закриється через 5 секунд...</p>
+</div>
+
+<script>
+    let seconds = 5;
+    const timerText = document.getElementById("timer");
+    const countdown = setInterval(function() {
+        seconds--;
+        timerText.textContent = "Сторінка закриється через " + seconds + " секунд...";
+
+        if (seconds <= 0) {
+            clearInterval(countdown);
+            window.close();
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>

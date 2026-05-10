@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Lab 4.3</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+h2 {
+    padding: 20px;
+}
+
+.strip {
+    position: relative;
+    height: 120px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.strip:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+@keyframes bounceVertical {
+    0% { top: 0; }
+    50% { top: 70px; }
+    100% { top: 0; }
+}
+
+@keyframes bottomToTop {
+    from { top: 100%; }
+    to { top: -30px; }
+}
+
+@keyframes topToBottomStop {
+    from { top: -30px; }
+    to { top: 70px; }
+}
+
+.bounce { animation: bounceVertical 4s ease-in-out infinite; }
+.up { animation: bottomToTop 6s linear infinite; }
+.downStop { animation: topToBottomStop 4s ease-out forwards; }
+
+.slow { animation-duration: 8s; }
+.fast { animation-duration: 2s; }
+
+</style>
+</head>
+
+<body>
+
+<h2>Вертикальний рух тексту</h2>
+
+<div class="strip" style="background-color: lightblue;">
+    <div class="content bounce">Коливання тексту</div>
+</div>
+
+<div class="strip" style="background-color: lightgreen;">
+    <div class="content up">Рух знизу вгору</div>
+</div>
+
+<div class="strip" style="background-color: cornflowerblue;">
+    <div class="content downStop">Рух зверху вниз із зупинкою</div>
+</div>
+
+<div class="strip" style="background-color: pink;">
+    <div class="content up slow">Повільний рух</div>
+</div>
+
+<div class="strip" style="background-color: lightgray; color: black;">
+    <div class="content up fast">Швидкий рух</div>
+</div>
+
+</body>
+</html>
+

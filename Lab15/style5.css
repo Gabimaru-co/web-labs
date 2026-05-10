@@ -1,0 +1,75 @@
+/* ===== ПЛАВНИЙ ГРАДІЄНТ ФОНУ ===== */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(270deg, #5166b1, #c6cb88, #be1919);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* заголовок*/
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+/* стилі карточок*/
+p {
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.35s ease;
+}
+
+/* 1*/
+.first {
+    color: #000000; 
+    text-align: left; 
+    font-family: Arial, sans-serif;
+    border-left: 6px solid #ed12be;
+    line-height: 1.4; /*інтервал */
+}
+
+/*2 */
+.second {
+    color: #b86942; 
+    text-align: right; 
+    font-family: Georgia, serif;
+    font-size: 18px;
+    border-right: 6px solid #f32506;
+    line-height: 1.8;
+}
+
+/* ефект */
+p:hover {
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* поява */
+p {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

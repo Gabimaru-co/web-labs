@@ -1,0 +1,84 @@
+/* Анимированный фоновый градиент */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    text-align: center; 
+    padding-top: 50px;
+    margin: 0;
+    min-height: 100vh;
+    color: white;
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+    overflow-x: hidden; /* щоб не ламало сторінку */
+}
+
+/* anim fon */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* Заголовок */
+h2 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+/* Контейнер */
+.map-container {
+    display: inline-block;
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+/* Hover контейнера */
+.map-container:hover {
+    transform: scale(1.02);
+}
+/* foto*/
+img { 
+    display: block;
+    border-radius: 10px;
+
+    width: 1000px;   /* 🔴 КЛЮЧОВЕ */
+    height: auto;
+
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.01);
+}
+/* text */
+#info-text {
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: bold;
+
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+
+    padding: 15px 40px;
+    border-radius: 50px;
+    min-width: 300px;
+
+    border: 2px solid #23d5ab;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+/* Активний текст */
+.text-active {
+    transform: translateY(-5px) scale(1.05);
+    color: #fff;
+    box-shadow: 0 0 30px #23d5ab;
+}

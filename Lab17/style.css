@@ -1,0 +1,67 @@
+/*Загальне */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #111;
+}
+h1 {
+    margin-bottom: 30px;
+}
+.block {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    transition: 0.5s;
+}
+.content {
+    background: rgba(0,0,0,0.5);
+    padding: 20px 40px;
+    border-radius: 15px;
+}
+.block1 {
+    background-image:url(images/bg1.jpg) ;
+}
+.block2 {
+    background-image: url(images/bg2.jpg);
+    background-repeat: no-repeat;
+}
+.block3 {
+    background-image: url('images/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.block4 {
+    background-image: url('images/bg4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.block5 {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('images/bg5.jpg');
+    background-size: cover;
+}
+.block6 {
+    background:
+        url('images/bg6.png'),
+        linear-gradient(45deg, #ff00cc, #3333ff);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*ефект*/
+.block:hover {
+    filter: brightness(1.2);
+}
+/*анім*/
+.block {
+    opacity: 0;
+    transform: translateY(50px);
+}
+.block.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}

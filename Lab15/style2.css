@@ -1,0 +1,41 @@
+/* ===== Анімація фону ===== */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #0f2027, #44798b, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+/*заголовок */
+h2 {
+    text-align: center;
+    color: white;
+}
+
+/* 1 2 абз*/
+p {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4);
+    color: #00c3ff; /* 🔵 ОСНОВНИЙ КОЛІР */
+    border: 1px solid #00c3ff;
+    transition: 0.3s;
+}
+/* 3 абз*/
+.last {
+    color: #ff4d4d; /* 🔴 ЧІТКО інший */
+    border: 1px solid #ff4d4d;
+    background: rgba(255, 0, 0, 0.15);
+}
+/* hover*/
+p:hover {
+    transform: scale(1.03);
+}

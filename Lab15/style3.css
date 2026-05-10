@@ -1,0 +1,80 @@
+/* фон*/
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(270deg, #4facfe, #00f2fe, #43e97b);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* заголовок*/
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 30px;
+
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+/* стилі абзаців*/
+p {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 20px;
+
+    border-radius: 15px;
+
+    color: #222;
+    line-height: 1.6;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    transition: all 0.3s ease;
+}
+
+/* абзаци */
+.small {
+    font-size: 14px;
+    background: linear-gradient(135deg, #984b4b, #30c5dc); 
+    border-left: 5px solid #df38ba;
+}
+
+.medium {
+    font-size: 18px;
+    background: linear-gradient(135deg, #619eca, #4b41e0);
+    border-left: 5px solid #5013b1;
+}
+
+.big {
+    font-size: 24px;
+    background: linear-gradient(135deg, #3eb448, #1bca21);
+    border-left: 5px solid #2f8e00;
+}
+
+/* ===== Hover ефект ===== */
+p:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* ===== Плавна поява ===== */
+p {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

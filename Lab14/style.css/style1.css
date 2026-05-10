@@ -1,0 +1,72 @@
+/*фон*/
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Times New Roman", serif;
+    background: linear-gradient(270deg, #b35792, #b52e69, #a13f7d);
+    background-size: 400% 400%;
+    animation: bg 12s ease infinite;
+}
+/*анім*/
+@keyframes bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/*основний блок*/
+.box {
+    width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    border: 3px solid black;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+/* hover */
+.box:hover {
+    transform: scale(1.01);
+}
+/*заголовок*/
+.title {
+    text-align: center;
+    color: purple;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+/*Перший текст*/
+.text1 {
+    color: brown;
+    font-style: italic;
+    text-align: justify;
+    line-height: 1.6;
+    padding: 10px;
+}
+/*другий*/
+.text2 {
+    color: blue;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 20px;
+    background: rgba(0,0,255,0.1);
+    padding: 10px;
+    border-left: 5px solid blue;
+}
+/*третій*/
+.text3 {
+    color: darkred;
+    font-style: italic;
+    border-top: 2px solid red;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+/*адаптив*/
+@media (max-width: 850px) {
+    .box {
+        width: 90%;
+    }
+}

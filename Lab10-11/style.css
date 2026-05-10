@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #6dd5ed, #2193b0);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG { /* анім фон */
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* заголовок */
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+/* лінія під */
+h2::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    margin: 10px auto;
+    background: white;
+    border-radius: 5px;
+}
+form {  /* форма */
+    background: rgba(255,255,255,0.95);
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+/* поля */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+input:focus, textarea:focus, select:focus { /* ефект з наведенням */
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102,126,234,0.6);
+    outline: none;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+.buttons {  /* кнопки */
+    text-align: center;
+}
+input[type="submit"],
+input[type="reset"] {
+    width: 45%;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}

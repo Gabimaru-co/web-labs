@@ -1,0 +1,105 @@
+/* Загальні стилі */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f6f6f6;
+    color: #333;
+}
+h1 {
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 10px;
+    transition: color 0.5s ease; /* Анім заголовка */
+}
+h1:hover {
+    color: #cf3737;
+}
+/* Список визначень */
+dl {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Ефект всієї картки */
+dl:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+dt {
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-top: 20px;
+}
+/* Анімація посилань */
+dt a {
+    color: #3498db;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+dt a:hover {
+    color: #e74c3c;
+    transform: scale(1.05); /* +текст */
+}
+/* Плавна лінія  */
+dt a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+}
+dt a:hover::after {
+    width: 100%;
+}
+dd {
+    margin-left: 0;
+    margin-top: 5px;
+    padding-left: 20px;
+    border-left: 3px solid #eee;
+    color: #666;
+    transition: border-color 0.3s ease;
+}
+dl:hover dd {
+    border-left-color: #3498db; /* риска */
+}
+/* Кнопки навігації  */
+.nav-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #3498db;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-bottom: 20px;
+}
+.nav-link:hover {
+    background: #2c3e50;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.nav-link:active {
+    transform: translateY(1px); /* Ефект натискання */
+}
+/* Анім пошти */
+.mail-link {
+    color: #e67e22;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.mail-link:hover {
+    letter-spacing: 1px; /* Текст розширюється */
+    color: #d35400;
+}

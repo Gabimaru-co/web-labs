@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    /* gradient */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+/* Шапка */
+header {
+    padding: 30px 0;
+}
+/* Заголовок */
+.title {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+/* Карточка */
+.friend {
+    position: relative;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+/* Фото */
+.friend img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s;
+}
+.friend:hover img {
+    transform: scale(1.1);
+}
+/* Текст */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+
+    transform: translateY(100%);
+    transition: 0.4s;
+}
+.friend:hover .overlay {
+    transform: translateY(0);
+}

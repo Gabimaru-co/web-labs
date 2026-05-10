@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Лабораторна 4.1</title>
+<meta name="author" content="Viskrivets">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, rgb(0, 102, 204), rgb(0, 204, 153));
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    padding: 20px;
+    font-size: 28px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.block {
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+@keyframes moveLeft {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes moveRight {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+
+@keyframes bounce {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(80%); }
+    100% { transform: translateX(0); }
+}
+
+.text {
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.left { animation: moveLeft 8s linear infinite; }
+.right { animation: moveRight 8s linear infinite; }
+.bounce { animation: bounce 5s ease-in-out infinite; }
+
+</style>
+</head>
+
+<body>
+
+<h2> Горизонтальний рух тексту </h2>
+
+<div class="block" style="background-color: rgb(173, 216, 230); color: rgb(0,0,139);">
+    <div class="text bounce">Текст рухається з боку в бік.</div>
+</div>
+
+<div class="block" style="background-color: rgb(144, 238, 144); color: rgb(0,100,0);">
+    <div class="text left">Текст рухається справа наліво.</div>
+</div>
+
+<div class="block" style="background-color: rgb(255, 255, 224); color: rgb(184,134,11);">
+    <div class="text right">Текст рухається зліва направо.</div>
+</div>
+
+<div class="block" style="background-color: rgb(255, 182, 193); color: rgb(139,0,0);">
+    <div class="text left" style="animation-duration: 15s;">
+        Повільний рух .
+    </div>
+</div>
+
+<div class="block" style="background-color: rgb(211, 211, 211); color: rgb(0,0,0);">
+    <div class="text left" style="animation-duration: 3s;">
+        Швидкий рух .
+    </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,58 @@
+/* анім фон*/
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* фон */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff6a88);
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* заголовок */
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+/* карточка*/
+p {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    line-height: 1.6;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+
+/* текст */
+.p1 { 
+    color: #ff1a1a; 
+    border-left: 5px solid #ff4d4d; 
+}
+.p2 { 
+    color: #0066ff; 
+    border-left: 5px solid #4da6ff; 
+}
+.p3 { 
+    color: #009933; 
+    border-left: 5px solid #33cc33; 
+}
+
+/* Hover */
+p:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.35);
+}

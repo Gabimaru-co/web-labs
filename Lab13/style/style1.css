@@ -1,0 +1,96 @@
+/* ===== ЗАГАЛЬНІ ===== */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(270deg, #c43d58, #32c7bd, #c43d58);
+    background-size: 400% 400%;
+    animation: bg 10s ease infinite;
+}
+
+/* анімація фону */
+@keyframes bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: rgb(7, 40, 57);
+    text-decoration: underline;
+}
+
+/* ===== БЛОКИ ===== */
+.block {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+/* hover */
+.block:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* ===== ПЕРЕТАСОВКА (змійка) ===== */
+.block1 {
+    border-left: 8px solid #9b1633;
+    margin-left: 10%;
+    transform: rotate(-1deg);
+}
+
+.block2 {
+    border: 3px solid rgb(128, 0, 0);
+    font-style: italic;
+    margin-right: 10%;
+    transform: rotate(1deg);
+}
+
+.block3 {
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px gray;
+    margin-left: 10%;
+    transform: rotate(-1deg);
+}
+
+/* ===== СПИСОК ===== */
+.list {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    font-size: 18px;
+}
+
+.list li {
+    margin: 10px 0;
+}
+
+/* ===== АДАПТИВ (щоб не ламалось на телефоні) ===== */
+@media (max-width: 768px) {
+    .block1,
+    .block2,
+    .block3 {
+        margin-left: auto;
+        margin-right: auto;
+        transform: none;
+    }
+}
