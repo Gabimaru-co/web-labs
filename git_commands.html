@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команди Git</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 { text-align: center; color: #333; }
+        h2 { color: #4a90e2; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        code { font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Основні команди Git</h1>
+        
+        <h2>1. Ініціалізація та клонування</h2>
+        <pre><code>git init
+git clone https://github.com/user/repo.git
+git status</code></pre>
+
+        <h2>2. Робота з файлами та комітами</h2>
+        <pre><code>git add .
+git add filename.html
+git commit -m "Повідомлення коміту"
+git commit -am "Повідомлення"
+git log --oneline
+git log</code></pre>
+
+        <h2>3. Робота з гілками</h2>
+        <pre><code>git branch
+git branch назва_гілки
+git checkout назва_гілки
+git checkout -b назва_гілки
+git merge назва_гілки</code></pre>
+
+        <h2>4. Робота з віддаленим репозиторієм</h2>
+        <pre><code>git remote add origin URL
+git push origin develop
+git pull
+git push -u origin develop</code></pre>
+
+        <h2>5. Інші корисні команди</h2>
+        <pre><code>git checkout -- filename
+git reset
+git stash
+git diff</code></pre>
+    </div>
+</body>
+</html>
